@@ -1,0 +1,17 @@
+trigger:
+  - master
+variables:
+  - group: SS-VariablesGroup-001
+  - task: UiPathPack@3
+    inputs:
+      versionType: 'AutoVersion'
+      projectJsonPath: '$(Build.SourcesDirectory)\project.json'
+      outputType: 'Process'
+      orchestratorConnection: 'SS-ServiceConnection-001'
+      outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+      
+      - task: UiPathDeploy@3
+        inputs:
+          orchestratorConnection: 'SS-ServiceConnection-001'
+          packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
+          folderName: 'Shared'
