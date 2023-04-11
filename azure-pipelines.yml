@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: DESKTOP-TQ9C292
+pool: Default
   #vmImage: DESKTOP-TQ9C292
 
 steps:
