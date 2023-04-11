@@ -21,7 +21,7 @@ steps:
     orchestratorConnection: 'SS-ServiceConnection-001'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 
-task: UiPathDeploy@3
+- task: UiPathDeploy@3
   inputs:
     orchestratorConnection: 'SS-ServiceConnection-001'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
