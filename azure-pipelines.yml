@@ -1,7 +1,6 @@
 trigger:
   - master
-variables:
-  - group: SS-VariablesGroup-001
+
   - task: UiPathPack@3
     inputs:
       versionType: 'AutoVersion'
@@ -9,7 +8,7 @@ variables:
       outputType: 'Process'
       orchestratorConnection: 'SS-ServiceConnection-001'
       outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-      
+
       - task: UiPathDeploy@3
         inputs:
           orchestratorConnection: 'SS-ServiceConnection-001'
