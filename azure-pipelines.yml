@@ -6,8 +6,8 @@
 trigger:
 - main
 
-pool: Default
-  vmImage: DESKTOP-TQ9C292
+pool: DESKTOP-TQ9C292
+  #vmImage: DESKTOP-TQ9C292
 
 steps:
 - script: echo Hello, world!
