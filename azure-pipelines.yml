@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: SS-Agent-Pool-001 #SS-Azure-CICD-001-VM
+pool: SS-Azure-CICD-001-VM #SS-Agent-Pool-001
   #vmImage: ubuntu-latest
 
 steps:
