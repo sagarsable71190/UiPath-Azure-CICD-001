@@ -17,7 +17,7 @@ steps:
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)\project.json'
-    outputType: 'Process'
+    #outputType: 'Process'
     orchestratorConnection: 'SS-ServiceConnection-001'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 
