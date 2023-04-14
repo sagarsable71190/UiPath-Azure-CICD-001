@@ -19,7 +19,7 @@ steps:
 
 - task: UiPathPack@3
   inputs:
-    versionType: 'AutoVersion'
+    versionType: 'CurrentVersion'
     projectJsonPath: '$(Build.SourcesDirectory)\project.json'
     #outputType: 'Process'
     orchestratorConnection: 'SS-ServiceConnection-001'
