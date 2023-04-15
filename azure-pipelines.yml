@@ -13,6 +13,12 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+
+- task: UiPathInstallPlatform@3
+  inputs:
+    cliVersion: 'WIN_22.10.8438.32859'
+    #cliNupkgPath: '$(Agent.ToolsDirectory)\nupkg\UiPath.CLI.Windows.22.10.8438.32859.nupkg'
+
 - task: UiPathPack@3
   inputs:
     versionType: 'CurrentVersion'
@@ -20,12 +26,6 @@ steps:
     #outputType: 'Process'
     orchestratorConnection: 'SS-ServiceConnection-001'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-
-
-- task: UiPathInstallPlatform@3
-  inputs:
-    cliVersion: 'WIN_22.10.8438.32859'
-    #cliNupkgPath: '$(Agent.ToolsDirectory)\nupkg\UiPath.CLI.Windows.22.10.8438.32859.nupkg'
 
 - task: UiPathDeploy@3
   inputs:
