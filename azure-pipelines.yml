@@ -27,6 +27,7 @@ steps:
     orchestratorConnection: 'SS-ServiceConnection-001'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 
+
 - task: UiPathDeploy@3
   inputs:
     orchestratorConnection: 'SS-ServiceConnection-001'
@@ -36,4 +37,5 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
+    echo $(Agent.ToolsDirectory)
   displayName: 'Run a multi-line script'
