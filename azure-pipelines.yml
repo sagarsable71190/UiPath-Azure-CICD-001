@@ -13,12 +13,6 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-
-- task: UiPathInstallPlatform@3
-  inputs:
-    cliVersion: 'WIN_22.10.8438.32859'
-    #cliNupkgPath: '$(Agent.ToolsDirectory)\uipcli\22.10.8438-32859\x64\uipcli.exe'
-
 - task: UiPathPack@3
   inputs:
     versionType: 'AutoVersion'
