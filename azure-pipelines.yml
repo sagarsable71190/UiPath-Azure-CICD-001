@@ -17,7 +17,8 @@ steps:
 - task: UiPathInstallPlatform@3
   inputs:
     cliVersion: 'WIN_22.10.8438.32859'
-    #cliNupkgPath: '$(Agent.ToolsDirectory)\nupkg\UiPath.CLI.Windows.22.10.8438.32859.nupkg'
+    #ToolsPath: '$(Agent.ToolsDirectory)\uipcli\22.10.8438-32859\x64\uipcli.exe'
+    cliNupkgPath: '$(Agent.ToolsDirectory)\uipcli\22.10.8438-32859\x64\uipcli.exe'
 
 - task: UiPathPack@3
   inputs:
